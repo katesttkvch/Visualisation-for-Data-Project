@@ -23,6 +23,7 @@
     <select id = "city">
         <option value = " "> Select City </option>
         <option value = "Austin"> Austin </option>
+        <option value = "Virginia"> Virginia Beach </option>
     </select>
 
     <label for = "priority" style = "margin-left: 20px;"> Priority: </label>
@@ -53,7 +54,6 @@
 
         prioritySelect.addEventListener("change", function(){
             if (citySelect.value && prioritySelect.value){
-                // Construct the filename based on the selection
                 const city = citySelect.value;
                 const priority = prioritySelect.value;
                 const fileName = `${city}_${priority}_map.html`;
