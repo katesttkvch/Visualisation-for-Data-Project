@@ -22,8 +22,10 @@
     <label for = "city"> City: </label>
     <select id = "city">
         <option value = " "> Select City </option>
+        <option value = "Seattle"> Seattle </option>
         <option value = "Austin"> Austin </option>
         <option value = "Virginia"> Virginia Beach </option>
+        <option value = "Minneapolis"> Minneapolis </option>
     </select>
 
     <label for = "priority" style = "margin-left: 20px;"> Priority: </label>
@@ -43,11 +45,12 @@
         const mapFrame = document.getElementById("mapFrame");
 
         citySelect.addEventListener("change", function(){
-            if (citySelect.value){
-                prioritySelect.disabled = false;
+            if (citySelect.value == "Minneapolis"){
+                prioritySelect.disabled = true;
+                mapFrame.src = "Minneapolis_priority_heatmap.html";
             } 
             else {
-                prioritySelect.disabled = true;
+                prioritySelect.disabled = false;
                 mapFrame.src = "";
             }
         });
